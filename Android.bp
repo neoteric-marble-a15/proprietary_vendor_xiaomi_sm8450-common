@@ -4708,6 +4708,23 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "libvpptestutils",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libvpptestutils.so"],
+			shared_libs: ["libcutils", "liblog", "libvpplibrary", "libvppcommon", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libwfdaac_vendor",
 	owner: "xiaomi",
 	strip: {
@@ -8050,6 +8067,15 @@ prebuilt_etc_xml {
 	name: "vendor.qti.hardware.radio.ims.xml",
 	owner: "xiaomi",
 	src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.radio.ims.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "vendor.qti.hardware.vpp@2.0-service.xml",
+	owner: "xiaomi",
+	src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.vpp@2.0-service.xml",
 	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
