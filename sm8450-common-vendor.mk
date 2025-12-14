@@ -82,6 +82,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/ssgtzd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ssgtzd.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/trusteduilistener.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/trusteduilistener.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.hardware.dms@2.0-service.rc \
+    vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/dolbycodec2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dolbycodec2.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.media.c2@1.0-service.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/vendor.dpmd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dpmd.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.adsprpc-guestos-service.rc \
@@ -117,7 +118,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/media_codecs_cape.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_cape.xml \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/media_codecs_cape_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_cape_vendor.xml \
-    vendor/xiaomi/sm8450-common/proprietary/vendor/etc/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/media_codecs_performance_cape.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_cape.xml \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/media_codecs_performance_cape_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_cape_vendor.xml \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/media_codecs_performance_taro.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_taro.xml \
@@ -129,6 +129,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/media_codecs_taro_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_taro_vendor.xml \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/media_codecs_ukee.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_ukee.xml \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/media_codecs_ukee_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_ukee_vendor.xml \
+    vendor/xiaomi/sm8450-common/proprietary/vendor/etc/media_codecs_with_dolby_taro.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_with_dolby_taro.xml \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/media_profiles_cape.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_cape.xml \
@@ -162,6 +163,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.0-impl \
     btaudio_offload_if \
+    c2.dolby.avc.dec \
+    c2.dolby.avc.sec.dec \
+    c2.dolby.client \
+    c2.dolby.egl \
+    c2.dolby.hevc.dec \
+    c2.dolby.hevc.enc \
+    c2.dolby.hevc.sec.dec \
+    c2.dolby.store \
     com.qualcomm.qti.dpm.api@1.0_vendor \
     com.qualcomm.qti.imscmservice@1.0_vendor \
     com.qualcomm.qti.imscmservice@2.0_vendor \
@@ -259,9 +268,12 @@ PRODUCT_PACKAGES += \
     libdiag \
     libdlbdsservice \
     libdlbpreg \
+    libdolbyottcameracontrol \
+    libdolbyvision \
     libdpmqmihal \
     libdrmfs \
     libdrmtime \
+    libdsd2pcm \
     libdsi_netctrl \
     libdsutils \
     libeai_fixed \
@@ -423,7 +435,6 @@ PRODUCT_PACKAGES += \
     libvpphvx \
     libvppimmotion \
     libvpplibrary \
-    libvpptestutils \
     libwfdaac_vendor \
     libwfdcodecv4l2_proprietary \
     libwfdcommonutils_proprietary \
@@ -624,7 +635,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.gnss-service.xml \
     vendor.qti.hardware.limits-service.xml \
     vendor.qti.hardware.radio.ims.xml \
-    vendor.qti.hardware.vpp@2.0-service.xml \
     vendor.xiaomi.hw.touchfeature@1.0-service.xml \
     vendor.xiaomi.sensor.citsensorservice@2.0-service.xml \
     vendor.xiaomi.sensor.communicate@1.0_manifest.xml \
@@ -648,6 +658,7 @@ PRODUCT_PACKAGES += \
     android.hardware.identity-service-qti \
     android.hardware.keymaster@4.1-service-qti \
     android.hardware.security.keymint-service-qti \
+    dolbycodec2 \
     qcrilNrd \
     vendor.dolby.hardware.dms@2.0-service \
     vendor.dolby.media.c2@1.0-service \
