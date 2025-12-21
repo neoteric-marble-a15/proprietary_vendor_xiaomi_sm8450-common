@@ -574,6 +574,9 @@
     <EccEntry Ecc="101" Category="0" Condition="2" Plmn = "255 06" />
     <EccEntry Ecc="102" Category="0" Condition="2" Plmn = "255 06" />
     <EccEntry Ecc="103" Category="0" Condition="2" Plmn = "255 06" />
+    <EccEntry Ecc="101" Category="0" Condition="2" Plmn="255 01"/>
+    <EccEntry Ecc="102" Category="0" Condition="2" Plmn="255 01"/>
+    <EccEntry Ecc="103" Category="0" Condition="2" Plmn="255 01"/>
     <!--add ukraine xiaomi -->
 
     <!--add YL xiaomi -->
@@ -613,7 +616,7 @@
     <EccEntry Ecc="996" Category="0" Condition="2" Plmn = "426 FFF" />	
     <EccEntry Ecc="997" Category="0" Condition="2" Plmn = "426 FFF" />
     <EccEntry Ecc="998" Category="0" Condition="2" Plmn = "426 FFF" />	
-    <EccEntry Ecc="999" Category="0" Condition="2" Plmn = "426 FFF" />	
+    <EccEntry Ecc="999" Category="0" Condition="1" Plmn = "426 FFF" />
     <!--add Bahrain xiaomi -->
 
     <!--add Honduras xiaomi -->
@@ -715,6 +718,27 @@
 
     <!-- Add for Brazil operator xiaomi -->
     <EccEntry Ecc="190" Category="0" Condition="1" Plmn = "724 FFF" />
+    <EccEntry Ecc="112" Category="0" Condition="1" Plmn = "724 03" />
+    <EccEntry Ecc="911" Category="0" Condition="1" Plmn = "724 03" />
+    <EccEntry Ecc="192" Category="2" Condition="1" Plmn = "724 03" />
+    <EccEntry Ecc="193" Category="4" Condition="1" Plmn = "724 03" />
+    <EccEntry Ecc="185" Category="8" Condition="1" Plmn = "724 03" />
+    <!-- Add for Brazil operator xiaomi -->
+    <!-- modify for Brazil TIM operator Request jira:RUYI-BUGP3-9611-->
+    <EccEntry Ecc="190" Category="1" Condition="1" Plmn = "724 03" />
+    <EccEntry Ecc="190" Category="1" Condition="1" Plmn = "724 99" />
+    <EccEntry Ecc="192" Category="2" Condition="1" Plmn = "724 99" />
+    <EccEntry Ecc="193" Category="4" Condition="1" Plmn = "724 99" />
+    <EccEntry Ecc="185" Category="8" Condition="1" Plmn = "724 99" />
+    <EccEntry Ecc="190" Category="1" Condition="1" Plmn = "724 31" />
+    <EccEntry Ecc="192" Category="2" Condition="1" Plmn = "724 31" />
+    <EccEntry Ecc="193" Category="4" Condition="1" Plmn = "724 31" />
+    <EccEntry Ecc="185" Category="8" Condition="1" Plmn = "724 31" />
+    <EccEntry Ecc="190" Category="1" Condition="1" Plmn = "724 02" />
+    <EccEntry Ecc="192" Category="2" Condition="1" Plmn = "724 02" />
+    <EccEntry Ecc="193" Category="4" Condition="1" Plmn = "724 02" />
+    <EccEntry Ecc="185" Category="8" Condition="1" Plmn = "724 02" />
+
     <!-- Add for Brazil operator xiaomi -->
 
     <!-- Add for Colombia operator xiaomi-->
